@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saif El-Din Alaa — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="style.css" rel="stylesheet">
+<!-- Tailwind CSS (Play CDN) -->
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<!-- Page-wide decor taken from the reference design: gradient waves, thin curves, dot grids -->
+<div class="decor" aria-hidden="true">
+<svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dde3e7"/><stop offset="1" stop-color="#f3f5f6"/></linearGradient>
+<linearGradient id="g2" x1="1" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#e6e9ed"/><stop offset="1" stop-color="#f6f7f8"/></linearGradient>
+</defs>
+<g class="w1"><path d="M0 0H520C470 140 260 230 0 300Z" fill="url(#g1)"/></g>
+<g class="w2"><path d="M1600 900V560C1450 600 1250 700 1080 900Z" fill="url(#g2)"/><path d="M1600 900V710C1490 735 1340 790 1240 900Z" fill="#e8ebef" opacity=".7"/></g>
+<path class="ln" pathLength="1" d="M0 330C220 250 400 130 530 0"/>
+<path class="ln" pathLength="1" style="animation-delay:.7s" d="M900 900C1220 830 1470 650 1600 470"/>
+</svg>
+<i class="dots" style="right:3vw;top:48px"></i><i class="dots" style="left:3vw;bottom:48px"></i>
+</div>
+
+
+<header id="home" class="relative overflow-hidden min-h-screen flex items-center">
+<div class="relative max-w-6xl w-full mx-auto px-6 py-16 grid md:grid-cols-2 items-center gap-12">
+  <div>
+    <h1 class="font-extrabold leading-[.98] tracking-[-0.045em] text-[clamp(46px,8vw,92px)] mb-5">Saif El-Din<br>Alaa</h1>
+    <p class="typer text-[clamp(17px,2.6vw,30px)] font-medium text-[#1c2230] mb-7"><span class="sr-only">Business Administration, Freelancer, Content Creator</span><span id="ty" aria-hidden="true"></span><span class="caret" aria-hidden="true"></span></p>
+    <div class="flex flex-wrap gap-3.5" id="soc"></div>
+    <div class="flex flex-wrap gap-3 mt-8">
+      <a href="#contact" class="px-7 py-3.5 rounded-full bg-[#0a0a0a] text-white font-semibold text-sm hover:-translate-y-0.5 transition">Let's Connect</a>
+      <a href="#projects" class="px-7 py-3.5 rounded-full border-[1.5px] border-[#0a0a0a] font-semibold text-sm hover:-translate-y-0.5 transition">View Projects</a>
+    </div>
+  </div>
+  <div class="flex flex-col items-center">
+    <div class="float w-[min(78vw,420px)] aspect-square rounded-full overflow-hidden border-[5px] border-white shadow-[0_24px_50px_rgba(20,30,50,.18)] bg-[#9ca3ad]"><img alt="Saif El-Din Alaa" src="me.jpeg" class="w-full h-full object-cover"></div>
+    <div class="pulse w-2/3 h-6 mt-8 rounded-[50%]" style="background:radial-gradient(ellipse,rgba(20,30,50,.16),transparent 70%)"></div>
+  </div>
+</div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6">
+
+<section id="about"><h2 class="text-4xl font-extrabold tracking-tight mb-10">About Me</h2>
+<div class="grid lg:grid-cols-5 gap-8 items-start">
+  <div class="lg:col-span-3 text-[#4a5262] text-[17px] leading-[1.85]">
+    <p>I'm a senior Business Administration student at Galala University, enrolled in a Dual Degree Program with Arizona State University, with a growing focus on business development, entrepreneurship, and project development. Through academic projects, competitions, and leadership activities, I've gained hands-on experience in identifying opportunities, developing projects, working in teams, and turning ideas into practical solutions. I contributed to Dark Storm, an educational project that won 1st place in a competition organized by Saed Foundation, and to LABVERSE, an AI-powered educational platform that secured 3rd place in the RALLY Egypt Competition at Galala University. Alongside my business background, I work in graphic design, video editing, motion graphics, and digital content creation, and I'm currently building my Adobe Illustrator and After Effects skills through the Digital Egypt Pioneers Initiative (DEPI). I'm looking to contribute to business development, entrepreneurship, project development, digital media, and creative projects while gaining practical experience on meaningful work.</p>
+  </div>
+  <div class="lg:col-span-2 grid gap-5">
+    <div class="cx hv p-6 flex gap-4 items-center"><div class="chip w-14 h-14 rounded-2xl grid place-items-center text-2xl" data-i="trophy"></div><div><b class="block text-lg">1st Place</b><span class="text-sm text-[#5d6573]">Dark Storm — Saed Foundation</span></div></div>
+    <div class="cx hv p-6 flex gap-4 items-center"><div class="chip w-14 h-14 rounded-2xl grid place-items-center text-2xl" data-i="medal"></div><div><b class="block text-lg">3rd Place</b><span class="text-sm text-[#5d6573]">LABVERSE — RALLY Egypt, Galala University</span></div></div>
+    <a href="Saif-El-Din-Alaa-CV.pdf" download="Saif-El-Din-Alaa-CV.pdf" class="sbtn w-full"><span class="lab flex items-center gap-2.5"><span data-i="dl"></span>Download CV</span></a>
+  </div>
+</div></section>
+
+<section id="education"><h2 class="text-4xl font-extrabold tracking-tight mb-10">Education</h2>
+<div id="edu" class="grid md:grid-cols-2 gap-6 flex-1">
+  <div class="cx hv edu-card p-8 flex flex-col items-center justify-center text-center">
+    <div class="logo-box"><img src="gu.png" alt="Galala University logo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="mono" style="display:none">GU</span></div>
+    <h3 class="font-extrabold text-2xl tracking-tight mt-7">Galala University</h3>
+    <p class="text-[#5d6573] mt-2 max-w-sm leading-relaxed">Dual Degree Program with Arizona State University</p>
+  </div>
+  <div class="cx hv edu-card p-8 flex flex-col items-center justify-center text-center">
+    <div class="logo-box"><img src="asu.jpg" alt="Arizona State University logo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="mono" style="display:none">ASU</span></div>
+    <h3 class="font-extrabold text-2xl tracking-tight mt-7">Arizona State University</h3>
+    <p class="text-[#5d6573] mt-2 max-w-sm leading-relaxed">Bachelor of Administrative Sciences — Major in Business Administration</p>
+  </div>
+</div></section>
+
+<section id="skills"><h2 class="text-4xl font-extrabold tracking-tight mb-10">Skills</h2><div id="sk"></div></section>
+
+<section id="services"><h2 class="text-4xl font-extrabold tracking-tight mb-10">Services</h2><div id="svc" class="grid sm:grid-cols-2 gap-6 flex-1"></div></section>
+
+<section id="projects"><h2 class="text-4xl font-extrabold tracking-tight mb-10">Projects</h2>
+<div class="cx p-8 md:p-10 flex flex-col justify-center gap-9 flex-1">
+  <div class="grid md:grid-cols-5 gap-8 items-center">
+    <div class="md:col-span-3"><div class="chip w-14 h-14 rounded-2xl grid place-items-center text-2xl mb-5" data-i="flask"></div><h3 class="text-3xl font-extrabold tracking-tight">LABVERSE</h3><p class="font-semibold mt-1">AI-Powered Educational Platform</p><p class="text-[#4a5262] mt-3 leading-relaxed">LABVERSE is an educational platform designed to help Egyptian high-school students experience science through virtual experiments and interactive learning.</p></div>
+    <div class="md:col-span-2 chip rounded-3xl p-6"><span class="text-sm text-[#5d6573] font-medium">My Role</span><b class="block text-xl mt-1">Business Strategist</b><p class="text-[#4a5262] mt-1">Develops business model and growth plans</p></div>
+  </div>
+  <div class="grid sm:grid-cols-3 gap-5" id="shots">
+    <div class="shot"><span class="ph"><span class="text-2xl" data-i="img"></span><small>Project image 1</small></span><img src="p1-1.jpeg" alt="LABVERSE project image 1" loading="lazy" onerror="this.remove()"></div>
+    <div class="shot"><span class="ph"><span class="text-2xl" data-i="img"></span><small>Project image 2</small></span><img src="p1-2.jpeg" alt="LABVERSE project image 2" loading="lazy" onerror="this.remove()"></div>
+    <div class="shot"><span class="ph"><span class="text-2xl" data-i="img"></span><small>Project image 3</small></span><img src="p1-3.jpeg" alt="LABVERSE project image 3" loading="lazy" onerror="this.remove()"></div>
+  </div>
+</div></section>
+
+<section id="experience"><h2 class="text-4xl font-extrabold tracking-tight mb-10">Experience</h2><div id="exp" class="grid gap-4"></div></section>
+
+<section id="certificates"><h2 class="text-4xl font-extrabold tracking-tight mb-10">Certificates</h2><div id="ce"></div></section>
+
+<section id="reviews"><h2 class="text-4xl font-extrabold tracking-tight mb-10">Client Feedback</h2>
+<div id="rvw" class="carousel slide cx p-8 md:p-10" data-bs-ride="carousel" data-bs-interval="6000">
+  <div class="carousel-inner" id="rvi"></div>
+  <div class="flex items-center justify-between mt-8">
+    <div class="flex gap-2" id="rvd"></div>
+    <div class="flex gap-2"><button class="chip w-11 h-11 rounded-full grid place-items-center hover:bg-[#d6dce3]" data-bs-target="#rvw" data-bs-slide="prev" aria-label="Previous">&#8592;</button><button class="chip w-11 h-11 rounded-full grid place-items-center hover:bg-[#d6dce3]" data-bs-target="#rvw" data-bs-slide="next" aria-label="Next">&#8594;</button></div>
+  </div>
+</div></section>
+
+<section id="contact"><h2 class="text-4xl font-extrabold tracking-tight mb-10">Let's Connect</h2>
+<div class="grid lg:grid-cols-5 gap-6 items-stretch">
+  <div class="lg:col-span-2 grid gap-5 content-start">
+    <a href="mailto:seifeldimalaa64@gmail.com" class="cx hv p-6 flex gap-4 items-center"><div class="chip w-14 h-14 rounded-2xl grid place-items-center text-2xl flex-none" data-i="mail"></div><div class="min-w-0"><small class="block text-[#5d6573]">Email</small><b class="block text-[15px] break-all">seifeldimalaa64@gmail.com</b></div></a>
+    <a href="tel:+201148621293" class="cx hv p-6 flex gap-4 items-center"><div class="chip w-14 h-14 rounded-2xl grid place-items-center text-2xl flex-none" data-i="phone"></div><div><small class="block text-[#5d6573]">Phone</small><b class="block text-[15px]">+20 114 862 1293</b></div></a>
+    <button id="cp" type="button" class="cx hv p-6 flex gap-4 items-center text-left"><div class="chip w-14 h-14 rounded-2xl grid place-items-center text-2xl flex-none" data-i="copy"></div><div><small class="block text-[#5d6573]">Quick action</small><b class="block text-[15px]">Copy email address</b></div></button>
+    <div class="chip rounded-full px-5 py-3 flex items-center gap-3 text-sm font-semibold w-fit"><span class="live"></span>Open to freelance &amp; collaborations</div>
+  </div>
+  <form id="cf" novalidate class="cx lg:col-span-3 p-7 md:p-9 space-y-5" autocomplete="on">
+    <div><h3 class="text-2xl font-extrabold tracking-tight">Send me a message</h3><p class="text-sm text-[#5d6573] mt-1">Tell me about your project or idea. I usually reply within 24 hours.</p></div>
+    <div class="grid sm:grid-cols-2 gap-5">
+      <div><label for="f-name" class="lbl">Full name</label><input id="f-name" name="name" class="fld" type="text" placeholder="Your name" required minlength="2" autocomplete="name"><p class="err"></p></div>
+      <div><label for="f-email" class="lbl">Email address</label><input id="f-email" name="email" class="fld" type="email" placeholder="you@example.com" required autocomplete="email"><p class="err"></p></div>
+    </div>
+    <div><label for="f-sub" class="lbl">What do you need?</label><select id="f-sub" name="subject" class="fld sel"><option>General inquiry</option><option>Graphic Design</option><option>Video Editing</option><option>Motion Graphics</option><option>Presentation Design</option><option>Business Development</option><option>Other</option></select></div>
+    <div><div class="flex justify-between items-end"><label for="f-msg" class="lbl">Message</label><span id="mc" class="text-xs text-[#5d6573] mb-2">0 / 600</span></div><textarea id="f-msg" name="message" class="fld" rows="5" maxlength="600" placeholder="Write your message here..." required minlength="10"></textarea><p class="err"></p></div>
+    <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+    <button id="sb" type="submit" class="sbtn"><span class="lab flex items-center gap-2.5">Send Message <span data-i="send"></span></span><span class="spin" aria-hidden="true"></span></button>
+    <div id="fs" role="status" aria-live="polite"></div>
+  </form>
+</div></section>
+</main>
+
+<footer class="border-t border-[#e1e5ea] bg-white/70 backdrop-blur">
+  <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10">
+    <div><a href="#home" class="text-2xl font-extrabold tracking-tight">Saif El-Din Alaa</a><p class="text-sm text-[#5d6573] mt-3 max-w-xs leading-relaxed">Business Administration student, freelancer and content creator focused on business development, entrepreneurship and digital media.</p><div class="flex gap-3 mt-6" id="fsoc"></div></div>
+    <div><h3 class="font-bold mb-4">Quick Links</h3><ul class="grid grid-cols-2 gap-x-6 gap-y-2.5 text-sm text-[#5d6573]"><li><a href="#about" class="hover:text-[#010105] transition capitalize">about</a></li><li><a href="#education" class="hover:text-[#010105] transition capitalize">education</a></li><li><a href="#skills" class="hover:text-[#010105] transition capitalize">skills</a></li><li><a href="#services" class="hover:text-[#010105] transition capitalize">services</a></li><li><a href="#projects" class="hover:text-[#010105] transition capitalize">projects</a></li><li><a href="#experience" class="hover:text-[#010105] transition capitalize">experience</a></li><li><a href="#certificates" class="hover:text-[#010105] transition capitalize">certificates</a></li><li><a href="#contact" class="hover:text-[#010105] transition capitalize">contact</a></li></ul></div>
+    <div><h3 class="font-bold mb-4">Contact</h3><ul class="space-y-3 text-sm text-[#5d6573]"><li><a href="mailto:seifeldimalaa64@gmail.com" class="flex items-center gap-3 hover:text-[#010105] transition break-all"><span class="chip w-9 h-9 rounded-full grid place-items-center text-base flex-none" data-i="mail"></span>seifeldimalaa64@gmail.com</a></li><li><a href="tel:+201148621293" class="flex items-center gap-3 hover:text-[#010105] transition"><span class="chip w-9 h-9 rounded-full grid place-items-center text-base flex-none" data-i="phone"></span>+20 114 862 1293</a></li></ul></div>
+  </div>
+  <div class="border-t border-[#e1e5ea]"><div class="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-[#5d6573]"><span>© 2026 Saif El-Din Alaa. All rights reserved.</span><a href="#home" class="font-semibold hover:text-[#010105] transition">Back to top &#8593;</a></div></div>
+</footer>
+<div id="toast" class="bg-[#0a0a0a] text-white px-6 py-3 rounded-full text-sm font-semibold z-50" role="status"></div>
+
+
+<!-- Bootstrap 5 JS bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="script.js"></script>
+</body>
+</html>

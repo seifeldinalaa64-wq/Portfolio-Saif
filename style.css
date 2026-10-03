@@ -1,0 +1,134 @@
+/* Custom styles — used together with Bootstrap 5 + Tailwind CSS (CDN) */
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:#f8f9f9;color:#0a0a0a;font-family:Montserrat,system-ui,Arial,sans-serif;overflow-x:hidden}
+svg{flex:none}
+.cx{background:#fff;border:1px solid #e1e5ea;border-radius:24px;box-shadow:0 10px 30px rgba(40,52,70,.07);transition:transform .25s,box-shadow .25s}
+.hv:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(40,52,70,.13)}
+.chip{background:#e4e8ec}
+.tabbtn{padding:10px 22px;border-radius:99px;background:#e4e8ec;color:#5d6573;font-weight:600;font-size:14px;transition:.2s;border:0}
+.tabbtn.active{background:#0a0a0a;color:#fff}
+.ind{width:10px;height:10px;border-radius:9px;background:#d5d9e0;border:0;padding:0;transition:.25s}.ind.active{width:32px;background:#0a0a0a}
+.acc[aria-expanded=true] .chev{transform:rotate(180deg)}.chev{transition:.25s}
+.float{animation:fl 5s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-12px)}}
+:focus-visible{outline:2px solid #0a0a0a;outline-offset:3px}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);opacity:0;transition:.3s;pointer-events:none}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* Tailwind has a .collapse utility (visibility) that clashes with Bootstrap's .collapse */
+.collapse{visibility:visible!important}
+
+/* ===== Palette from the reference image =====
+   bg #f8f9f9 · waves #dde3e7→#f3f5f6 · chips #e4e8ec · dots #cad0d7 · ink #010105 · shadow #b0b5bb */
+:root{--ease:cubic-bezier(.22,.61,.36,1)}
+body{color:#010105}
+
+/* Decor layer */
+.decor{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.decor svg{position:absolute;inset:0;width:100%;height:100%}
+.decor .w1{animation:drift1 16s ease-in-out infinite alternate}
+.decor .w2{animation:drift2 18s ease-in-out infinite alternate}
+.decor .ln{fill:none;stroke:#b9c4d0;stroke-width:1.4;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.6s var(--ease) .3s forwards}
+.decor .dots{position:absolute;width:122px;height:86px;background:radial-gradient(circle,#cad0d7 2px,transparent 2.6px) 0 0/18px 18px;animation:fadein 1.4s ease .6s backwards}
+@keyframes drift1{to{transform:translate(18px,12px) scale(1.03)}}
+@keyframes drift2{to{transform:translate(-22px,-14px) scale(1.03)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fadein{from{opacity:0}}
+
+/* One reveal system for the whole page (hero load + scroll) */
+[data-r]{opacity:0}
+[data-r].in{opacity:1;animation:rise .85s var(--ease) var(--d,0ms) backwards}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}}
+
+/* Section titles: short line grows in with the title */
+main h2{position:relative;padding-bottom:18px}
+main h2::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:0;border-radius:4px;background:#010105;transition:width .9s var(--ease) .35s}
+main h2.in::after{width:56px}
+
+/* Photo: float + shadow breathing in sync */
+.float{animation:fl 5s ease-in-out infinite}
+.pulse{animation:sh 5s ease-in-out infinite}
+@keyframes sh{50%{transform:scale(.86);opacity:.55}}
+
+@media(prefers-reduced-motion:reduce){[data-r]{opacity:1}.decor .ln{stroke-dashoffset:0}}
+
+/* ===== Full-page sections ===== */
+main section{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:96px 0}
+
+/* ===== Contact form ===== */
+.lbl{display:block;font-size:13px;font-weight:600;margin-bottom:8px}
+.fld{width:100%;padding:14px 18px;border-radius:16px;background:#f2f4f6;border:1.5px solid transparent;font:500 15px Montserrat,system-ui,sans-serif;color:#010105;outline:none;transition:background .2s,border-color .2s,box-shadow .2s;resize:vertical}
+.fld::placeholder{color:#8b93a1}
+.fld:hover{background:#eceff2}
+.fld:focus{background:#fff;border-color:#010105;box-shadow:0 0 0 4px rgba(1,1,5,.06)}
+.fld.bad{background:#fff;border-color:#d64545;box-shadow:0 0 0 4px rgba(214,69,69,.08)}
+.err{display:none;color:#c23b3b;font-size:12.5px;font-weight:500;margin:6px 0 0}.fld.bad~.err{display:block}
+.sel{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:46px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23010105' stroke-width='3'%3E%3Cpath d='M5 9l7 7 7-7'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 18px center}
+.sbtn{position:relative;display:inline-flex;align-items:center;justify-content:center;min-width:190px;padding:15px 30px;border-radius:99px;background:#010105;color:#fff;font:600 15px Montserrat,sans-serif;border:0;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s}
+.sbtn:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(1,1,5,.25)}
+.sbtn:disabled{cursor:progress;transform:none;box-shadow:none}
+.sbtn .spin{position:absolute;width:20px;height:20px;border-radius:50%;border:2.5px solid rgba(255,255,255,.35);border-top-color:#fff;opacity:0;animation:spin .7s linear infinite}
+.sbtn.loading .lab{opacity:0}.sbtn.loading .spin{opacity:1}
+@keyframes spin{to{transform:rotate(360deg)}}
+#fs:empty{display:none}
+#fs{padding:14px 18px;border-radius:16px;font-size:14px;font-weight:500;display:flex;gap:10px;align-items:flex-start;animation:rise .5s var(--ease) backwards}
+#fs.ok{background:#e8f3ec;color:#1d6b3a}#fs.no{background:#fbeaea;color:#a63232}
+#fs a{text-decoration:underline;font-weight:600}
+.live{width:10px;height:10px;border-radius:50%;background:#2fb766;box-shadow:0 0 0 0 rgba(47,183,102,.5);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(47,183,102,0)}100%{box-shadow:0 0 0 0 rgba(47,183,102,0)}}
+
+/* Footer social icons */
+#fsoc a{width:44px;height:44px;font-size:19px}
+footer{position:relative}
+
+/* ===== Hero typewriter ===== */
+.typer{min-height:1.6em;white-space:nowrap;display:flex;align-items:center}
+#ty{white-space:pre}
+.caret{display:inline-block;width:2.5px;height:1.15em;margin-left:4px;border-radius:2px;background:#010105;animation:blink 1s steps(1) infinite}
+.caret.typing{animation:none}
+@keyframes blink{50%{opacity:0}}
+
+/* ===== Services: 2x2 grid that fills the screen, centered cards ===== */
+#svc{flex:1 1 auto}
+@media(min-width:640px){#svc{grid-auto-rows:1fr}}
+.svc-card:hover .chip{background:#010105;color:#fff}
+.svc-card .chip{transition:background .3s var(--ease),color .3s var(--ease),transform .3s var(--ease)}
+.svc-card:hover .chip{transform:scale(1.06)}
+
+/* ===== Education: two matching logo cards ===== */
+#edu{grid-auto-rows:1fr}
+.logo-box{display:grid;place-items:center;max-width:100%;border-radius:24px;overflow:hidden;background:#f2f4f6;padding:0;line-height:0;transition:background .3s var(--ease)}
+.logo-box img{display:block;height:150px;width:auto;max-width:100%;object-fit:contain}
+.logo-box .mono{width:min(300px,100%);height:150px;place-items:center;line-height:1;font-weight:800;font-size:44px;letter-spacing:-.04em;color:#010105}
+.edu-card:hover .logo-box{background:#e9edf0}
+
+/* ===== Project image slots: equal 16:10 tiles ===== */
+.shot{position:relative;aspect-ratio:16/10;border-radius:22px;overflow:hidden;background:#f2f4f6;border:1.5px dashed #cfd5dc}
+.shot .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#8b93a1;font-weight:600}
+.shot .ph small{font-size:13px}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#fff;transition:transform .6s var(--ease)}
+.shot:hover img{transform:scale(1.05)}
+.shot:has(img){border-style:solid;border-color:#e1e5ea}
+
+/* ===== Certificate image slots (same tile style as projects, certificate ratio) ===== */
+.shot.cert{aspect-ratio:7/5;border-radius:18px}
+.shot.cert .ph svg{font-size:30px}
+.shot.cert img{object-fit:contain;padding:6px}
+.cert-card .shot{transition:border-color .3s}
+.cert-card:hover .shot{border-color:#010105}
+
+/* ===== Skills: tall progress bars + interactive icons ===== */
+.sk-card{cursor:pointer;user-select:none}
+.sk-card:active{transform:scale(.985)}
+.sk-bar{height:16px;border-radius:99px;background:#e4e8ec;overflow:hidden}
+.sk-fill{display:block;position:relative;height:100%;width:0;border-radius:99px;overflow:hidden;background:linear-gradient(90deg,#010105,#3b4352);transition:width 1.3s var(--ease)}
+.sk-card.go .sk-fill{width:var(--w)}
+.sk-fill::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.5) 50%,transparent 70%);transform:translateX(-100%)}
+.sk-card:hover .sk-fill::after{animation:shine 1s var(--ease)}
+@keyframes shine{to{transform:translateX(100%)}}
+.sk-ico{transition:background .3s var(--ease),color .3s var(--ease),transform .4s var(--ease)}
+.sk-card:hover .sk-ico,.sk-card:focus-visible .sk-ico{background:#010105;color:#fff;transform:rotate(-8deg) scale(1.1)}
+@media(prefers-reduced-motion:reduce){.sk-fill{transition:none}}
+
+/* ===== Hero photo: fill the circle edge to edge ===== */
+.float img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
